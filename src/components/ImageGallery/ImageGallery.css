@@ -1,0 +1,87 @@
+.image-gallery{
+    display: flex;
+    flex-direction: column;
+}
+
+.image-gallery > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* configurações da imagem */
+.btn-image{
+    width: 200px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* animação quando o mouse passa por cima da imagem */
+.btn-image:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* configurações do fundo do modal */
+.modal-backdrop {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    z-index: 1000; 
+}
+
+/* configurações do conteúdo e posicionamento do modal */
+#modal{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: -10vh;
+}
+
+/* configurações da imagem */
+#modal-image{
+    bottom: 15vh;
+    left: 0;
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+}
+
+/* configurações do botão de fechar */
+.close-modal{
+    position: relative;
+    top: 10vh;
+    left: 20vw;
+    margin: 15px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: transparent;
+    cursor: none;
+}
+
+.close-modal:hover{
+    background: none;
+}
+
+/* icone de fechar */
+#close-icon{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* transicao quando o mouse passa por cima */
+#close-icon:hover{
+    transition: 0.3s ease-in-out;
+    filter: invert(80%) sepia(30%) saturate(50000%) hue-rotate(0deg) brightness(100%);
+}
